@@ -20,11 +20,11 @@ jobs:
 
       - name: Install dependencies
         run: npm install
+        working-directory: './my-project'
 
       - name: Build project
-        run: 
-        cd my-project  
-        npm run build
+        run: npm run build
+        working-directory: './my-project'
 
       - name: Deploy to Cloudflare
         uses: cloudflare/pages-action@v1
