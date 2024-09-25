@@ -10,10 +10,23 @@ const VideoCarousel = () => {
                 <div className='video-carousel_container'>
                     <div className='w-full h-full flex-center
                     rounded-3xl overflow-hidden bg-black'>
-                        <video>
+                        <video id='video'
+                        playsInline={true}
+                        preload='auto'
+                        muted>
                             <source src={list.video} type='video/mp4'/>
                         </video>
                     </div>
+                    <div className='absolute top-12 left-[5%] z-10'>
+                        {list.textLists.map((text) => 
+                            (<p key={text} className='md:text-2xl 
+                            text-xl font-medium'>
+                                {text}
+
+                            </p>))}
+
+                    </div>
+                    
                     </div>
                     </div>
         ))}
